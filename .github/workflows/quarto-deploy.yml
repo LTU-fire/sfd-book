@@ -2,25 +2,47 @@ name: Render and deploy Quarto site
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
   render:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install Quarto
+      - name: Install prerequisites
         run: |
-          wget https://github.com/quarto-dev/quarto-cli/releases/latest/download/quarto-linux-amd64.deb
-          sudo dpkg -i quarto-linux-amd64.deb
+          sudo apt-get update
+          sudo apt-get install -y wget gdebi-core
+
+      - name: Download Quarto .deb
+        run: |
+          wget https://github.com/quarto-dev/quarto-cli/releases/latest/download/quarto-linux-amd64.deb -O /tmp/quarto.deb
+
+      - name: Install Quarto (with dependency handling)
+        run: |
+          sudo apt-get install -y /tmp/quarto.deb || sudo apt-get -f install -y
+        # The `|| sudo apt-get -f install -y` tries to fix broken deps if dpkg-style install fails.
+
+      - name: Verify quarto
+        run: quarto --version
 
       - name: Render site
         run: quarto render
+        env:
+          # optionally reduce PDF builds if you don't need them:
+          QUARTO_PDF_RENDER: "false"
 
       - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./_book
+          github_token: ${{ secrets.GITHUB_TOKEN }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: ./_book
