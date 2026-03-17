@@ -1,0 +1,22 @@
+## Pelare vid brand
+
+### Tryckkapacitet
+
+$$
+N_{Rd,fi} = \chi_\theta k_y(\theta) N_{Rd}
+$$
+
+### Slankhet
+
+$$
+\lambda_\theta = \lambda \sqrt{\frac{k_y(\theta)}{k_E(\theta)}}
+$$
+
+### Kritisk temperatur
+
+Beräknas iterativt eftersom både:
+
+- hållfasthet  
+- styvhet  
+
+påverkas av temperatur.

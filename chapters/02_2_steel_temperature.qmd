@@ -1,0 +1,77 @@
+## Temperaturutveckling i stål
+
+Temperaturen i stålet är avgörande för bärförmågan vid brand. 
+Vid förhöjda temperaturer reduceras både hållfasthet och styvhet, vilket innebär att en korrekt temperaturberäkning är en förutsättning för dimensionering.
+
+Beräkningar av temperaturutveckling görs vanligtvis iterativt och lämpar sig därför väl för beräkning i exempelvis Excel eller motsvarande verktyg. Temperaturutvecklingen i stål bestäms stegvis över tiden. En typisk beräkning kan struktureras enligt tabellen nedan.
+
+| Tidssteg | Brandtemperatur | Ståltemperatur | Material | Temperaturändring |
+|----------|----------------|----------------|----------|-------------------|
+| $t_0$ | $T_{f,0}$ | $T_{s,0}$ | $c_{s,0}(T_{s,0})$ | $\Delta T_{s,0}$ |
+| $t_1 = t_0 + \Delta t$ | $T_{f,1}$ | $T_{s,1} = T_{s,0} + \Delta T_{s,0}$ | $c_{s,1}(T_{s,1})$ | $\Delta T_{s,1}$ |
+| $t_2 = t_1 + \Delta t$ | $T_{f,2}$ | $T_{s,2} = T_{s,1} + \Delta T_{s,1}$ | $c_{s,2}(T_{s,2})$ | $\Delta T_{s,2}$ |
+| $\ldots$ | $\ldots$ | $\ldots$ | $\ldots$ | $\ldots$ |
+| $t_n = t_{n-1} + \Delta t$ | $T_{f,n}$ | $T_{s,n} = T_{s,n-1} + \Delta T_{s,n-1}$ | $c_{s,n}(T_{s,n})$ | $\Delta T_{s,n}$ |
+
+Tabellen fylls i rad för rad där varje tidssteg bygger på föregående.
+
+$T_{f,i}$ är brandtemperaturen, $c_{s,i}(T_{s,i})$ är den specifika värmen i stålet vid temperaturen $T_{s,i}$ och temperaturändringen, $\Delta T_{s,i}$ beräknas för oskyddat stål som
+
+$\Delta T_{s,i}=k_{sh}\frac{A_m/V}{\rho c_{s,i-1}}\left(\varepsilon \sigma \left( \left(T_{f,i}+273\right)^4-\left(T_{f,i}+273\right)^4 \right)+h_c\left(T_{f,i}-T_{s,i-1}\right)\right)\Delta t$
+
+### Oskyddat stål
+
+Temperaturökningen i oskyddat stål kan beräknas enligt:
+
+$$
+\Delta T_s = \frac{A_m/V}{\rho c} (T_g - T_s)\Delta t
+$$
+
+där:
+
+- $A_m/V$ är sektionsfaktorn  
+- $\rho$ är stålets densitet  
+- $c$ är temperaturberoende specifik värme  
+- $T_g$ är brandgastemperaturen  
+- $T_s$ är ståltemperaturen  
+
+### Iterativ beräkning
+
+Beräkningen genomförs enligt följande:
+
+1. Sätt initial temperatur ($T_s = 20^\circ C$)  
+2. Bestäm brandgastemperatur $T_g$  
+3. Beräkna temperaturökning $\Delta T_s$  
+4. Uppdatera ståltemperatur  
+5. Upprepa för nästa tidssteg  
+
+### Sektionsfaktor
+
+Sektionsfaktorn definieras som:
+
+$$
+A_m/V = \frac{\text{exponerad yta}}{\text{volym}}
+$$
+
+För slutna profiler kan sektionsfaktorn approximeras som:
+
+$$
+A_m/V \approx \frac{1}{t}
+$$
+
+där $t$ är godstjockleken.
+
+### Skyddat stål
+
+För isolerade stålprofiler påverkas temperaturutvecklingen även av isoleringens egenskaper såsom:
+
+- värmeledningstal  
+- isoleringstjocklek  
+- densitet  
+- specifik värme  
+
+Detta leder till en reducerad temperaturökning jämfört med oskyddat stål.
+
+### Kommentar
+
+Temperaturberäkningen är en iterativ process där små förändringar i parametrar kan ge stora utslag i resultatet. Tabellen ovan utgör därför ett praktiskt verktyg vid dimensionering.

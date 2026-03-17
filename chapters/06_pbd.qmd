@@ -1,0 +1,6 @@
+# Analytisk dimensionering
+
+I det här avsnittet kommer vi att gå igenom strategier för att bestämma krav på bärande konstruktioner.
+
+
+{{< include 01_1_loads.qmd >}}

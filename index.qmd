@@ -1,0 +1,11 @@
+# Förord
+
+Denna bok behandlar brandteknisk dimensionering av stålkonstruktioner enligt Eurokod.
+
+Fokus ligger på:
+
+- temperaturutveckling  
+- bärförmåga vid brand  
+- praktisk dimensionering  
+
+Materialet är framtaget för konstruktörer och brandingenjörer.

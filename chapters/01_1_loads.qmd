@@ -1,0 +1,25 @@
+## Lastberäkning vid brand
+
+Dimensionerande last i brandfallet beräknas enligt olyckslastfallet.
+
+$$
+E_{d,fi} = G + \psi Q
+$$
+
+där:
+
+- $G$ = permanent last  
+- $Q$ = variabel last  
+- $\psi$ = reduktionsfaktor  
+
+### Jämförelse
+
+Brandlasten är normalt lägre än brottlastfallet.
+
+För stål kan:
+
+$$
+\eta_{fi} \approx 0.65
+$$
+
+antas som maximal utnyttjandegrad.

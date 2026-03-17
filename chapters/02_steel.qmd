@@ -1,0 +1,11 @@
+# Stål
+
+Det är konstigt att det inte går att få in text här. Det borde inte vara så konstigt att få till det, det är trots allt bara löptext i sammanhanget.
+
+{{< include 02_1_steel_introduction.qmd >}}
+{{< include 02_2_steel_temperature.qmd >}}
+{{< include 02_3_steel_cross_sections.qmd >}}
+{{< include 02_4_steel_material_properties.qmd >}}
+{{< include 02_5_steel_bending.qmd >}}
+{{< include 02_6_steel_compression.qmd >}}
+{{< include 02_7_steel_example.qmd >}}

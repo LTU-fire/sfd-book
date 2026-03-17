@@ -1,0 +1,29 @@
+## Hållfasthet vid brand
+
+Materialets hållfasthet reduceras med temperaturen.
+
+### Reduktionsfaktorer
+
+$$
+f_{y,\theta} = k_y(\theta) f_y
+$$
+
+$$
+E_\theta = k_E(\theta) E
+$$
+
+### Kritisk temperatur
+
+Konstruktionen är säker om:
+
+$$
+\eta_{fi} \leq k_y(\theta)
+$$
+
+För balkar kan kritisk temperatur approximeras till:
+
+$$
+\theta_{cr} \approx 540^\circ C
+$$
+
+För pelare är den lägre (~500°C).

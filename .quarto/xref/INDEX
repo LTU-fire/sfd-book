@@ -1,0 +1,53 @@
+{
+  "index.qmd": {
+    "index.html": "fc85f21c"
+  },
+  "chapters/01_1_loads.qmd": {
+    "01_1_loads.html": "07d2978f"
+  },
+  "chapters/02_1_steel_introduction.qmd": {
+    "02_1_steel_introduction.html": "5ddbc823"
+  },
+  "chapters/02_2_steel_temperature.qmd": {
+    "02_2_steel_temperature.html": "c3173b74"
+  },
+  "chapters/02_3_steel_cross_sections.qmd": {
+    "02_3_steel_cross_sections.html": "4bba4949"
+  },
+  "chapters/02_4_steel_material_properties.qmd": {
+    "02_4_steel_material_properties.html": "a53d1472"
+  },
+  "chapters/02_5_steel_bending.qmd": {
+    "02_5_steel_bending.html": "ea6dcc72"
+  },
+  "chapters/02_6_steel_compression.qmd": {
+    "02_6_steel_compression.html": "4fa368d6"
+  },
+  "chapters/02_7_steel_example.qmd": {
+    "02_7_steel_example.html": "94dc4b81"
+  },
+  "chapters/01_loads.qmd": {
+    "01_loads.html": "b8079216"
+  },
+  "chapters/02_steel.qmd": {
+    "02_steel.html": "45d3464c"
+  },
+  "chapters/01_0_loads.qmd": {
+    "01_0_loads.html": "6268695c"
+  },
+  "chapters/02_0_steel.qmd": {
+    "02_0_steel.html": "cd21c31f"
+  },
+  "chapters/03_timber.qmd": {
+    "03_timber.html": "427c303b"
+  },
+  "chapters/04_concrete.qmd": {
+    "04_concrete.html": "eaf66c11"
+  },
+  "chapters/05_design.qmd": {
+    "05_design.html": "9139cd87"
+  },
+  "chapters/06_pbd.qmd": {
+    "06_pbd.html": "2f6921b8"
+  }
+}

@@ -1,0 +1,23 @@
+## Balkar vid brand
+
+### Utan vippning
+
+Momentkapacitet:
+
+$$
+M_{Rd,fi} = k_y(\theta) M_{Rd}
+$$
+
+### Med vippning
+
+Instabilitet måste beaktas:
+
+$$
+M_{b,fi} = \chi_{LT,\theta} k_y(\theta) M_{Rd}
+$$
+
+där $\chi_{LT,\theta}$ beror på slankhet.
+
+### Kommentar
+
+Vippning fungerar i princip som pelarknäckning i balkens tryckta del.

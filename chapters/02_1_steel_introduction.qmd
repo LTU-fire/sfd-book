@@ -1,0 +1,27 @@
+## Introduktion
+
+Brandteknisk dimensionering av stålkonstruktioner kräver förståelse för hur materialegenskaper förändras vid förhöjda temperaturer samt hur laster ska hanteras i brandfallet.
+
+Beräkningarna är ofta iterativa och lämpar sig därför väl för numeriska verktyg som exempelvis Excel eller Python.
+
+### Dimensioneringsstrategier
+
+Eurokod anger tre strategier:
+
+- dimensionering i hållfasthetsdomänen  
+- dimensionering i tidsdomänen  
+- dimensionering i temperaturdomänen  
+
+Val av metod beror på:
+
+- tillgänglig information  
+- konstruktionens komplexitet  
+- krav på noggrannhet  
+
+### Gemensamma delar
+
+Oavsett metod krävs:
+
+- temperaturberäkning  
+- tvärsnittsklassificering  
+- lastberäkning  

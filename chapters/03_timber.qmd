@@ -1,0 +1,6 @@
+# Trä
+
+I det här avsnittet kommer vi att gå igenom dimensionering av träkonstruktioner i brandfallet.
+
+
+{{< include 01_1_loads.qmd >}}

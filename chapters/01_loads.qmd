@@ -1,0 +1,6 @@
+# Laster
+
+I det här avsnittet kommer vi att gå igenom lastberäkningar som är relevanta för brand.
+
+
+{{< include 01_1_loads.qmd >}}

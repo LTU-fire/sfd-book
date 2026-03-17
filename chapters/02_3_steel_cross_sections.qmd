@@ -1,0 +1,22 @@
+## Tvärsnittsklass
+
+Tvärsnitt klassificeras enligt Eurokod i klass 1–4.
+
+### Betydelse
+
+- Klass 1–2 → plasticitet möjlig  
+- Klass 3 → elastisk analys  
+- Klass 4 → effektivt tvärsnitt  
+
+### Vid brand
+
+Materialparametrar reduceras:
+
+- sträckgräns  
+- elasticitetsmodul  
+
+Förenkling:
+
+$$
+\varepsilon_\theta \approx 0.85 \varepsilon
+$$

@@ -1,0 +1,6 @@
+# Betong
+
+I det här avsnittet kommer vi att gå igenom betong vid brand.
+
+
+{{< include 01_1_loads.qmd >}}
