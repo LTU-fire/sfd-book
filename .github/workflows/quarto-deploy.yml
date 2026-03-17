@@ -11,16 +11,18 @@ jobs:
     permissions:
       contents: read
       pages: write
-      id-token: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Quarto
-        uses: quarto-dev/quarto-actions/setup-quarto@v2
-        with:
-          quarto-version: 'latest'
+        # använd v1 som finns och är stabil
+        uses: quarto-dev/quarto-actions/setup-quarto@v1
+
+      - name: Install LaTeX (optional, only if you need PDF build)
+        run: sudo apt-get update && sudo apt-get install -y texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra
+        # Ta bort eller kommentera raden ovan om du inte behöver PDF/LaTeX.
 
       - name: Render site
         run: quarto render
