@@ -27,22 +27,17 @@ jobs:
       - name: Install Quarto (with dependency handling)
         run: |
           sudo apt-get install -y /tmp/quarto.deb || sudo apt-get -f install -y
-        # The `|| sudo apt-get -f install -y` tries to fix broken deps if dpkg-style install fails.
 
-      - name: Verify quarto
+      - name: Verify Quarto
         run: quarto --version
 
       - name: Render site
-        run: quarto render
-        env:
-          # optionally reduce PDF builds if you don't need them:
-          QUARTO_PDF_RENDER: "false"
+        run: |
+          # If you do not need PDF builds, optionally set environment var to avoid LaTeX runs:
+          export QUARTO_PDF_RENDER=false
+          quarto render
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          publish_dir: ./_book
-          github_token: ${{ secrets.GITHUB_TOKEN }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: ./_book
