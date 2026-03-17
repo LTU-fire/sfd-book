@@ -1,4 +1,4 @@
-# designstrategier
+# Designstrategier
 
 I det här avsnittet kommer vi att gå igenom olika strategier för att lösa brandtekniska beräkningar av bärande konstruktioner.
 

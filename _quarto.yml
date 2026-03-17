@@ -1,29 +1,19 @@
 project:
   type: book
 
+number-sections: true
+
 book:
   title: "Brandteknisk dimensionering av bärande konstruktioner"
   author: "Joakim Sandström, LTU"
 
   chapters:
     - index.qmd
-
-    # Del I Laster
     - chapters/01_loads.qmd
-
-    # Del II Stål
     - chapters/02_steel.qmd
-
-    # Del III Trä
     - chapters/03_timber.qmd
-
-    # Del IV Betong
     - chapters/04_concrete.qmd
-
-    # Del V Dimensioneringsstrategier
     - chapters/05_design.qmd
-
-    # Del VI Analytisk dimensionering
     - chapters/06_pbd.qmd
 
   

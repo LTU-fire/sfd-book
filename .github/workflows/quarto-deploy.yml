@@ -20,7 +20,7 @@ jobs:
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup-quarto@v2
         with:
-          quarto-version: 'latest'  # eller en specifik version t.ex. '1.9.35'
+          quarto-version: 'latest'
 
       - name: Render site
         run: quarto render
@@ -28,8 +28,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.DEPLOY_KEY }}        # optional if you prefer deploy key
-          publish_dir: ./_site
-          # Using GITHUB_TOKEN automatically (no extra secret) is supported for public repos,
-          # but peaceiris suggests using PAT / deploy_key for private repos.
+          publish_dir: ./_book
           github_token: ${{ secrets.GITHUB_TOKEN }}
