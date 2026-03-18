@@ -1,6 +1,7 @@
 # Quarto build/output
 _book/
 _site/
+docs/
 .quarto/
 
 # temp / caches
