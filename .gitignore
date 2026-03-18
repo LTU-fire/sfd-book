@@ -1,0 +1,6 @@
+.ipynb_checkpoints/
+sfd-book/_build/
+sfd-book/.ipynb_checkpoints/
+**/*.rs.bk
+/.quarto/
+/_book/
