@@ -7,6 +7,8 @@ number-sections: true
 book:
   title: "Brandteknisk dimensionering av bärande konstruktioner"
   author: "Joakim Sandström, LTU"
+  search: true
+
 
   chapters:
     - index.qmd
@@ -23,3 +25,4 @@ format:
     theme: cosmo
   pdf:
     documentclass: scrreprt
+    fontfamily: Garamond
