@@ -1,16 +1,53 @@
-## Lastberäkning vid brand
+## Lastberäkning 
 
-Dimensionerande last i brandfallet beräknas enligt olyckslastfallet.
+Samma konstruktion antar olika lastfall för samma konstruktion för att fånga upp olikheten i sannolikhet för att just den lasten uppstår i kombination med andra händelser. Anledningen till det är som ofta annars, kostnade som skulle bli för stor om vi alltid räknade med samma last oavsett.
+
+För en konstruktör är de två vanligaste lastfallen:
+
+- Brukslastfallet, SLS, och
+- Brottlastfallet, ULS.
+
+Det första fallet redovisar lite lägre last då det används i första hand för att kontrollera nedböjningar och deformationer som kan ge obehag för användare av byggnadsverket. Den typen av situationer är inte farliga per se men i och med att de ofta kan uppstå används ett lastfall som antas kunna uppstå ofta. Den dimensionierande lasten, $E_{Rd}$ beräknas som det största av STR-A och STR-B:
 
 $$
-E_{d,fi} = G + \psi Q
+E_{Rd}=max\begin{cases}
+  \gamma_d\gamma_{\text{G,j,sup}}G_{\text{k,j,sup}} & STR-A   \\
+  \gamma_d \left( \xi \gamma_{\text{G,j,sup}}G_{\text{k,j,sup}}+\gamma_{\text{Q,1}}Q_{\text{k,1}}\right) & STR-B \\
+  \end{cases}
+$$
+
+Det andra fallet är den högsta lasten och används för att kontrollera om konstruktionen håller eller inte. Klarar vi inte den här lasten finns risk för fysisk skada på både byggnaden och personerna i den. Den här lastsituationen antas inte inträffa så ofta och har därför normalt ett högre dimensionerande värde. Olika situationer kräver olika lastfall och då brand sällan tittar på det här lastfallet kommer det inte hanteras ytterligare. Det kan dock vara värt att känna till att lastfallet ofta blir dimensionerande för träkonstruktioner vilket gör att dessa konstruktioner sällan når maximalt utnyttjande vid brottlastdimensionering.
+
+Då brand i sig är en händelse med låg sannolikhet kan det antas en låg sannolikhet för att själva branden inträffar samtidigt som lasten är hög. Det normala är därför att anta en lägre last i brandfallet än vid beräkning mot traditionellt brott i kallt tillstånd. Som dimensionerande last vid brandtekniska beräkningar, $E_{d,fi}$, antas därför det frekventa lastfallet vilket normalt beräknas som 
+
+$$
+E_{d,fi} = G_k + \psi_{1,2} Q_k
 $$
 
 där:
 
-- $G$ = permanent last  
-- $Q$ = variabel last  
-- $\psi$ = reduktionsfaktor  
+* $G_k$ = det karakteristiska lastvärdet för egentyngden  
+* $Q_k$ = det karakteristiska lastvärdet för den variabla lasten beroende på verksamheten  
+* $\psi_{1,2}$ = partialkoefficient för det frekventa eller kvasipermanenta lastfallet (i Sverige gäller $psi_1$)
+
+### Utnyttjandegrad 
+
+Vid brandteknisk dimensionering är det ofta relevant att arbeta med utnyttjandegrader istället för faktisk last. Anledningen är att konstruktionen redan dimensionerats för ULS och SLS innan det kommer till brand. För brand handlar det då mer om att dimensionera konstruktionens skydd och till det räcker ofta utnyttjandegraden bra.
+
+Utnyttjandegraden vid brand kan noteras som $\mu_{fi}$ och kan ha olika betydelse i olika dimensioneringssituationer och för olika material. Enkelt kan det beskrivas som:
+
+|          |        Drag/moment          |              Tryck             |
+|:---------|:---------------------------:|:------------------------------:|
+| Betong   | $\text{f}(k_{y,T})$         | $\text{f}(\chi_{fi}k_{y,T})$   |
+| Stål     | $\text{f}(A_{eff},W_{eff})$ | $\text{f}(A_{eff},\chi_{eff})$ |
+| Trä      | $\text{f}(k_{y,T},A_{eff})$ | $\text{f}(k_{y,T},A_{eff})$    |
+
+Varje uttryck i tabellen kommer att förklaras närmare under respektive materialdel men ska i grunden läsas som att $\mu_{fi}$ beräknas utifrån de variabler som nämns i tabellens respektive funktion, i.e. som en funktion av $k_{y,T}$ för dragna och momentbelastade stålprofiler.
+
+För att beräkna $\mu_{fi}$ krävs att vi ställer upp ett antal förhållanden:
+
+1. Lasten i brandlastfallet, $E_{d,fi}$, motsvarar förhållandet mellan hållfastheten i brottlastfallet, $R_{d}$, 
+
 
 ### Jämförelse
 

@@ -10,7 +10,7 @@ Beräkningar av temperaturutveckling görs vanligtvis iterativt och lämpar sig 
 :::
 
 | Tidssteg | Brandtemperatur | Ståltemperatur | Material | Temperaturändring |
-|----------|----------------|----------------|----------|-------------------|
+|:--------:|:---------------:|:--------------:|:--------:|:-----------------:|
 | $t_0$ | $T_{f,0}$ | $T_{s,0}$ | $c_{s,0}(T_{s,0})$ | $\Delta T_{s,0}$ |
 | $t_1 = t_0 + \Delta t$ | $T_{f,1}$ | $T_{s,1} = T_{s,0} + \Delta T_{s,0}$ | $c_{s,1}(T_{s,1})$ | $\Delta T_{s,1}$ |
 | $t_2 = t_1 + \Delta t$ | $T_{f,2}$ | $T_{s,2} = T_{s,1} + \Delta T_{s,1}$ | $c_{s,2}(T_{s,2})$ | $\Delta T_{s,2}$ |
@@ -21,7 +21,9 @@ Tabellen fylls i rad för rad där varje tidssteg bygger på föregående.
 
 $T_{f,i}$ är brandtemperaturen, $c_{s,i}(T_{s,i})$ är den specifika värmen i stålet vid temperaturen $T_{s,i}$ och temperaturändringen, $\Delta T_{s,i}$ beräknas för oskyddat stål som
 
-$\Delta T_{s,i}=k_{sh}\frac{A_m/V}{\rho c_{s,i-1}}\left(\varepsilon \sigma \left( \left(T_{f,i}+273\right)^4-\left(T_{f,i}+273\right)^4 \right)+h_c\left(T_{f,i}-T_{s,i-1}\right)\right)\Delta t$
+$$
+\Delta T_{s,i}=k_{sh}\frac{A_m/V}{\rho c_{s,i-1}}\left(\varepsilon \sigma \left( \left(T_{f,i}+273\right)^4-\left(T_{f,i}+273\right)^4 \right)+h_c\left(T_{f,i}-T_{s,i-1}\right)\right)\Delta t
+$$
 
 ### Oskyddat stål
 
