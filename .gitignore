@@ -1,7 +1,16 @@
-sfd-book/_build/
-sfd-book/.ipynb_checkpoints/
-**/*.rs.bk
-/.quarto/
-/_book/
-/docs/
+# Quarto build/output
+_book/
+_site/
+.quarto/
 
+# temp / caches
+.quarto/*
+
+# Notebooks / temp files
+*.quarto_ipynb_*
+test_files/
+test*.html
+
+# System files
+.DS_Store
+Thumbs.db
