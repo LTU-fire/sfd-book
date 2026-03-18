@@ -14,3 +14,6 @@ test*.html
 # System files
 .DS_Store
 Thumbs.db
+
+/.quarto/
+**/*.quarto_ipynb
