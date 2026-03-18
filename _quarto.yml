@@ -1,6 +1,5 @@
 project:
-  type: website
-  output-dir: docs
+  type: book
 
 number-sections: true
 
