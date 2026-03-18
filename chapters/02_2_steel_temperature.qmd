@@ -5,6 +5,9 @@ Vid förhöjda temperaturer reduceras både hållfasthet och styvhet, vilket inn
 
 Beräkningar av temperaturutveckling görs vanligtvis iterativt och lämpar sig därför väl för beräkning i exempelvis Excel eller motsvarande verktyg. Temperaturutvecklingen i stål bestäms stegvis över tiden. En typisk beräkning kan struktureras enligt tabellen nedan.
 
+::: {.column-margin}
+[Övning temperaturer i oskyddat stål](https://numbas.mathcentre.ac.uk/question/108549/stal-pelare-kritisk-temperatur)
+
 | Tidssteg | Brandtemperatur | Ståltemperatur | Material | Temperaturändring |
 |----------|----------------|----------------|----------|-------------------|
 | $t_0$ | $T_{f,0}$ | $T_{s,0}$ | $c_{s,0}(T_{s,0})$ | $\Delta T_{s,0}$ |
