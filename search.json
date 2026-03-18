@@ -1,0 +1,192 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Brandteknisk dimensionering av bärande konstruktioner",
+    "section": "",
+    "text": "1 Förord\nDenna bok behandlar brandteknisk dimensionering av stålkonstruktioner enligt Eurokod.\nFokus ligger på:\n\ntemperaturutveckling\n\nbärförmåga vid brand\n\npraktisk dimensionering\n\nMaterialet är framtaget för konstruktörer och brandingenjörer.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Förord</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01_loads.html",
+    "href": "chapters/01_loads.html",
+    "title": "2  Laster",
+    "section": "",
+    "text": "2.1 Lastberäkning vid brand\nI det här avsnittet kommer vi att gå igenom lastberäkningar som är relevanta för brand.\nDimensionerande last i brandfallet beräknas enligt olyckslastfallet.\n\\[\nE_{d,fi} = G + \\psi Q\n\\]\ndär:",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Laster</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/01_loads.html#lastberäkning-vid-brand",
+    "href": "chapters/01_loads.html#lastberäkning-vid-brand",
+    "title": "2  Laster",
+    "section": "",
+    "text": "\\(G\\) = permanent last\n\n\\(Q\\) = variabel last\n\n\\(\\psi\\) = reduktionsfaktor\n\n\n2.1.1 Jämförelse\nBrandlasten är normalt lägre än brottlastfallet.\nFör stål kan:\n\\[\n\\eta_{fi} \\approx 0.65\n\\]\nantas som maximal utnyttjandegrad.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Laster</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02_steel.html",
+    "href": "chapters/02_steel.html",
+    "title": "3  Stål",
+    "section": "",
+    "text": "3.1 Introduktion\nDet är konstigt att det inte går att få in text här. Det borde inte vara så konstigt att få till det, det är trots allt bara löptext i sammanhanget.\nBrandteknisk dimensionering av stålkonstruktioner kräver förståelse för hur materialegenskaper förändras vid förhöjda temperaturer samt hur laster ska hanteras i brandfallet.\nBeräkningarna är ofta iterativa och lämpar sig därför väl för numeriska verktyg som exempelvis Excel eller Python.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Stål</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02_steel.html#introduktion",
+    "href": "chapters/02_steel.html#introduktion",
+    "title": "3  Stål",
+    "section": "",
+    "text": "3.1.1 Dimensioneringsstrategier\nEurokod anger tre strategier:\n\ndimensionering i hållfasthetsdomänen\n\ndimensionering i tidsdomänen\n\ndimensionering i temperaturdomänen\n\nVal av metod beror på:\n\ntillgänglig information\n\nkonstruktionens komplexitet\n\nkrav på noggrannhet\n\n\n\n3.1.2 Gemensamma delar\nOavsett metod krävs:\n\ntemperaturberäkning\n\ntvärsnittsklassificering\n\nlastberäkning",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Stål</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02_steel.html#temperaturutveckling-i-stål",
+    "href": "chapters/02_steel.html#temperaturutveckling-i-stål",
+    "title": "3  Stål",
+    "section": "3.2 Temperaturutveckling i stål",
+    "text": "3.2 Temperaturutveckling i stål\nTemperaturen i stålet är avgörande för bärförmågan vid brand. Vid förhöjda temperaturer reduceras både hållfasthet och styvhet, vilket innebär att en korrekt temperaturberäkning är en förutsättning för dimensionering.\nBeräkningar av temperaturutveckling görs vanligtvis iterativt och lämpar sig därför väl för beräkning i exempelvis Excel eller motsvarande verktyg. Temperaturutvecklingen i stål bestäms stegvis över tiden. En typisk beräkning kan struktureras enligt tabellen nedan.\n\n\n\n\n\n\n\n\n\n\nTidssteg\nBrandtemperatur\nStåltemperatur\nMaterial\nTemperaturändring\n\n\n\n\n\\(t_0\\)\n\\(T_{f,0}\\)\n\\(T_{s,0}\\)\n\\(c_{s,0}(T_{s,0})\\)\n\\(\\Delta T_{s,0}\\)\n\n\n\\(t_1 = t_0 + \\Delta t\\)\n\\(T_{f,1}\\)\n\\(T_{s,1} = T_{s,0} + \\Delta T_{s,0}\\)\n\\(c_{s,1}(T_{s,1})\\)\n\\(\\Delta T_{s,1}\\)\n\n\n\\(t_2 = t_1 + \\Delta t\\)\n\\(T_{f,2}\\)\n\\(T_{s,2} = T_{s,1} + \\Delta T_{s,1}\\)\n\\(c_{s,2}(T_{s,2})\\)\n\\(\\Delta T_{s,2}\\)\n\n\n\\(\\ldots\\)\n\\(\\ldots\\)\n\\(\\ldots\\)\n\\(\\ldots\\)\n\\(\\ldots\\)\n\n\n\\(t_n = t_{n-1} + \\Delta t\\)\n\\(T_{f,n}\\)\n\\(T_{s,n} = T_{s,n-1} + \\Delta T_{s,n-1}\\)\n\\(c_{s,n}(T_{s,n})\\)\n\\(\\Delta T_{s,n}\\)\n\n\n\nTabellen fylls i rad för rad där varje tidssteg bygger på föregående.\n\\(T_{f,i}\\) är brandtemperaturen, \\(c_{s,i}(T_{s,i})\\) är den specifika värmen i stålet vid temperaturen \\(T_{s,i}\\) och temperaturändringen, \\(\\Delta T_{s,i}\\) beräknas för oskyddat stål som\n\\(\\Delta T_{s,i}=k_{sh}\\frac{A_m/V}{\\rho c_{s,i-1}}\\left(\\varepsilon \\sigma \\left( \\left(T_{f,i}+273\\right)^4-\\left(T_{f,i}+273\\right)^4 \\right)+h_c\\left(T_{f,i}-T_{s,i-1}\\right)\\right)\\Delta t\\)\n\n3.2.1 Oskyddat stål\nTemperaturökningen i oskyddat stål kan beräknas enligt:\n\\[\n\\Delta T_s = \\frac{A_m/V}{\\rho c} (T_g - T_s)\\Delta t\n\\]\ndär:\n\n\\(A_m/V\\) är sektionsfaktorn\n\n\\(\\rho\\) är stålets densitet\n\n\\(c\\) är temperaturberoende specifik värme\n\n\\(T_g\\) är brandgastemperaturen\n\n\\(T_s\\) är ståltemperaturen\n\n\n\n3.2.2 Iterativ beräkning\nBeräkningen genomförs enligt följande:\n\nSätt initial temperatur (\\(T_s = 20^\\circ C\\))\n\nBestäm brandgastemperatur \\(T_g\\)\n\nBeräkna temperaturökning \\(\\Delta T_s\\)\n\nUppdatera ståltemperatur\n\nUpprepa för nästa tidssteg\n\n\n\n3.2.3 Sektionsfaktor\nSektionsfaktorn definieras som:\n\\[\nA_m/V = \\frac{\\text{exponerad yta}}{\\text{volym}}\n\\]\nFör slutna profiler kan sektionsfaktorn approximeras som:\n\\[\nA_m/V \\approx \\frac{1}{t}\n\\]\ndär \\(t\\) är godstjockleken.\n\n\n3.2.4 Skyddat stål\nFör isolerade stålprofiler påverkas temperaturutvecklingen även av isoleringens egenskaper såsom:\n\nvärmeledningstal\n\nisoleringstjocklek\n\ndensitet\n\nspecifik värme\n\nDetta leder till en reducerad temperaturökning jämfört med oskyddat stål.\n\n\n3.2.5 Kommentar\nTemperaturberäkningen är en iterativ process där små förändringar i parametrar kan ge stora utslag i resultatet. Tabellen ovan utgör därför ett praktiskt verktyg vid dimensionering.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Stål</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02_steel.html#tvärsnittsklass",
+    "href": "chapters/02_steel.html#tvärsnittsklass",
+    "title": "3  Stål",
+    "section": "3.3 Tvärsnittsklass",
+    "text": "3.3 Tvärsnittsklass\nTvärsnitt klassificeras enligt Eurokod i klass 1–4.\n\n3.3.1 Betydelse\n\nKlass 1–2 → plasticitet möjlig\n\nKlass 3 → elastisk analys\n\nKlass 4 → effektivt tvärsnitt\n\n\n\n3.3.2 Vid brand\nMaterialparametrar reduceras:\n\nsträckgräns\n\nelasticitetsmodul\n\nFörenkling:\n\\[\n\\varepsilon_\\theta \\approx 0.85 \\varepsilon\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Stål</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02_steel.html#hållfasthet-vid-brand",
+    "href": "chapters/02_steel.html#hållfasthet-vid-brand",
+    "title": "3  Stål",
+    "section": "3.4 Hållfasthet vid brand",
+    "text": "3.4 Hållfasthet vid brand\nMaterialets hållfasthet reduceras med temperaturen.\n\n3.4.1 Reduktionsfaktorer\n\\[\nf_{y,\\theta} = k_y(\\theta) f_y\n\\]\n\\[\nE_\\theta = k_E(\\theta) E\n\\]\n\n\n3.4.2 Kritisk temperatur\nKonstruktionen är säker om:\n\\[\n\\eta_{fi} \\leq k_y(\\theta)\n\\]\nFör balkar kan kritisk temperatur approximeras till:\n\\[\n\\theta_{cr} \\approx 540^\\circ C\n\\]\nFör pelare är den lägre (~500°C).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Stål</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02_steel.html#balkar-vid-brand",
+    "href": "chapters/02_steel.html#balkar-vid-brand",
+    "title": "3  Stål",
+    "section": "3.5 Balkar vid brand",
+    "text": "3.5 Balkar vid brand\n\n3.5.1 Utan vippning\nMomentkapacitet:\n\\[\nM_{Rd,fi} = k_y(\\theta) M_{Rd}\n\\]\n\n\n3.5.2 Med vippning\nInstabilitet måste beaktas:\n\\[\nM_{b,fi} = \\chi_{LT,\\theta} k_y(\\theta) M_{Rd}\n\\]\ndär \\(\\chi_{LT,\\theta}\\) beror på slankhet.\n\n\n3.5.3 Kommentar\nVippning fungerar i princip som pelarknäckning i balkens tryckta del.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Stål</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02_steel.html#pelare-vid-brand",
+    "href": "chapters/02_steel.html#pelare-vid-brand",
+    "title": "3  Stål",
+    "section": "3.6 Pelare vid brand",
+    "text": "3.6 Pelare vid brand\n\n3.6.1 Tryckkapacitet\n\\[\nN_{Rd,fi} = \\chi_\\theta k_y(\\theta) N_{Rd}\n\\]\n\n\n3.6.2 Slankhet\n\\[\n\\lambda_\\theta = \\lambda \\sqrt{\\frac{k_y(\\theta)}{k_E(\\theta)}}\n\\]\n\n\n3.6.3 Kritisk temperatur\nBeräknas iterativt eftersom både:\n\nhållfasthet\n\nstyvhet\n\npåverkas av temperatur.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Stål</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02_steel.html#exempel",
+    "href": "chapters/02_steel.html#exempel",
+    "title": "3  Stål",
+    "section": "3.7 Exempel",
+    "text": "3.7 Exempel\n\n3.7.1 Kritisk temperatur i pelare",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Stål</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03_timber.html",
+    "href": "chapters/03_timber.html",
+    "title": "4  Trä",
+    "section": "",
+    "text": "4.1 Lastberäkning vid brand\nI det här avsnittet kommer vi att gå igenom dimensionering av träkonstruktioner i brandfallet.\nDimensionerande last i brandfallet beräknas enligt olyckslastfallet.\n\\[\nE_{d,fi} = G + \\psi Q\n\\]\ndär:",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Trä</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/03_timber.html#lastberäkning-vid-brand",
+    "href": "chapters/03_timber.html#lastberäkning-vid-brand",
+    "title": "4  Trä",
+    "section": "",
+    "text": "\\(G\\) = permanent last\n\n\\(Q\\) = variabel last\n\n\\(\\psi\\) = reduktionsfaktor\n\n\n4.1.1 Jämförelse\nBrandlasten är normalt lägre än brottlastfallet.\nFör stål kan:\n\\[\n\\eta_{fi} \\approx 0.65\n\\]\nantas som maximal utnyttjandegrad.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Trä</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04_concrete.html",
+    "href": "chapters/04_concrete.html",
+    "title": "5  Betong",
+    "section": "",
+    "text": "5.1 Lastberäkning vid brand\nI det här avsnittet kommer vi att gå igenom betong vid brand.\nDimensionerande last i brandfallet beräknas enligt olyckslastfallet.\n\\[\nE_{d,fi} = G + \\psi Q\n\\]\ndär:",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Betong</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/04_concrete.html#lastberäkning-vid-brand",
+    "href": "chapters/04_concrete.html#lastberäkning-vid-brand",
+    "title": "5  Betong",
+    "section": "",
+    "text": "\\(G\\) = permanent last\n\n\\(Q\\) = variabel last\n\n\\(\\psi\\) = reduktionsfaktor\n\n\n5.1.1 Jämförelse\nBrandlasten är normalt lägre än brottlastfallet.\nFör stål kan:\n\\[\n\\eta_{fi} \\approx 0.65\n\\]\nantas som maximal utnyttjandegrad.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Betong</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05_design.html",
+    "href": "chapters/05_design.html",
+    "title": "6  Designstrategier",
+    "section": "",
+    "text": "6.1 Lastberäkning vid brand\nI det här avsnittet kommer vi att gå igenom olika strategier för att lösa brandtekniska beräkningar av bärande konstruktioner.\nDimensionerande last i brandfallet beräknas enligt olyckslastfallet.\n\\[\nE_{d,fi} = G + \\psi Q\n\\]\ndär:",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Designstrategier</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/05_design.html#lastberäkning-vid-brand",
+    "href": "chapters/05_design.html#lastberäkning-vid-brand",
+    "title": "6  Designstrategier",
+    "section": "",
+    "text": "\\(G\\) = permanent last\n\n\\(Q\\) = variabel last\n\n\\(\\psi\\) = reduktionsfaktor\n\n\n6.1.1 Jämförelse\nBrandlasten är normalt lägre än brottlastfallet.\nFör stål kan:\n\\[\n\\eta_{fi} \\approx 0.65\n\\]\nantas som maximal utnyttjandegrad.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Designstrategier</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06_pbd.html",
+    "href": "chapters/06_pbd.html",
+    "title": "7  Analytisk dimensionering",
+    "section": "",
+    "text": "7.1 Lastberäkning vid brand\nI det här avsnittet kommer vi att gå igenom strategier för att bestämma krav på bärande konstruktioner.\nDimensionerande last i brandfallet beräknas enligt olyckslastfallet.\n\\[\nE_{d,fi} = G + \\psi Q\n\\]\ndär:",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Analytisk dimensionering</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/06_pbd.html#lastberäkning-vid-brand",
+    "href": "chapters/06_pbd.html#lastberäkning-vid-brand",
+    "title": "7  Analytisk dimensionering",
+    "section": "",
+    "text": "\\(G\\) = permanent last\n\n\\(Q\\) = variabel last\n\n\\(\\psi\\) = reduktionsfaktor\n\n\n7.1.1 Jämförelse\nBrandlasten är normalt lägre än brottlastfallet.\nFör stål kan:\n\\[\n\\eta_{fi} \\approx 0.65\n\\]\nantas som maximal utnyttjandegrad.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Analytisk dimensionering</span>"
+    ]
+  }
+]
