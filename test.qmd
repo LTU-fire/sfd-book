@@ -1,8 +1,0 @@
-#Test
-
-Detta är en Quarto-sida.
-
-```{python}
-#| echo: false
-print("Hello")
-```
