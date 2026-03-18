@@ -2,7 +2,7 @@
 _book/
 _site/
 .quarto/
-.pdf
+*.pdf
 
 # temp / caches
 .quarto/*
