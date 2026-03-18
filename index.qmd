@@ -1,4 +1,4 @@
-# Förord
+# Förord {.unnumbered}
 
 Denna bok behandlar brandteknisk dimensionering av stålkonstruktioner enligt Eurokod.
 
