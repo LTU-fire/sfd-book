@@ -206,18 +206,12 @@ $$
 
 Där 
 
-$A_o$
-: summan av arean för alla ventilationsöppningar
-
-$h_o$
-: den viktade höjden på öppningarna enligt $h_{o}=A_v/w_o$ 
-
-$w_o$
-: den totala bredden på alla öppningar
-
-$A_t$
-: den totala omslutningsarean inklusive öppningar
-
+<ul class="no-bullets">
+  <li>$A_o$ - summan av arean för alla ventilationsöppningar</li>
+  <li>$h_o$ - den viktade höjden på öppningarna enligt $h_{o}=A_v/w_o$</li>
+  <li>$w_o$ - den totala bredden på alla öppningar</li>
+  <li>$A_t$ - den totala omslutningsarean inklusive öppningar</li>
+</ul>
 
 En öppningsfaktor på minst 0.02 (m$^½$) bör användas för att ta hänsyn till otätheter och läckage.
 
