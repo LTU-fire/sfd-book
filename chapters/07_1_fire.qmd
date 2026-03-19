@@ -206,11 +206,12 @@ $$
 
 Där 
 
-| | $A_o$ - | summan av arean för alla ventilationsöppningar |
 |-|--------:|:-----------------------------------------------|
+| | $A_o$ - | summan av arean för alla ventilationsöppningar |
 | | $h_o$ - | den viktade höjden på öppningarna enligt $h_{o}=A_v/w_o$ |
 | | $w_o$ - | den totala bredden på alla öppningar |
 | | $A_t$ - | den totala omslutningsarean inklusive öppningar |
+: {.borderless}
 
 En öppningsfaktor på minst 0.02 (m$^½$) bör användas för att ta hänsyn till otätheter och läckage.
 
@@ -272,7 +273,7 @@ Alla bränder är inledningsvis lokala. Dimensionering bör förutsätta att bra
 För BK2- och BK3-byggnader finns möjligheten att tillämpa lokal brand även i lokaler där brand kan gå till övertändning. Detta förutsätter att sannolikheten för övertändning är tillräckligt liten, exempelvis genom att tekniska system förhindrar branden att växa sig så stor att övertändning kan ske. För BK1-byggnader finns dock inte samma möjlighet. 
 Brandpåkänning från lokal brand kan beräknas med metoder angivna i EN 1991-1-2 Annex C.
 
-#### Fire severity
+### Fire severity
 
 I den tidiga brandprovningen klassificerades byggnadsdelar utifrån hur länge de motstod en brand. Branden kvantifierades sedan till att likna den standardbrandkurva som tillämpas idag och ambitionen var att den skulle någorlunda representera en tänkt brandutveckling [Babrauskas]. Under 1920-talet gjordes försök där temperaturen i brandrum mättes över tid beroende på brandbelastning i rummet. Temperaturen översattes till en brandpåverkan som i sin tur översattes till den tid med standardbrand som samma brandpåverkan uppnåtts [Ingberg]. Efter andra världskriget noterades att detta förhållande endast var giltigt för obrännbara konstruktioner då en av förutsättningarna var att stommen i sig inte fick bidra till brandförloppet [PW building studies].
 
