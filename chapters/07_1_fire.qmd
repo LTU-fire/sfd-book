@@ -250,9 +250,9 @@ Genom att anta att $T_f$ har återgått till $T_0$  kan tiden till avslutad avsv
 
 $$
 t_{cool}=\begin{cases}
-  \frac{\frac{T_{max}-T_0}{625}+t^*_{max}}{\Gamma} & för & t^*_{max} \leq 0.5 \\
-  \frac{\frac{T_{max}-T_0}{250\left(3-t^*_{max}\right)}+t^*_{max}}{\Gamma} & för & 0.5 < t^*_{max} < 2.0 \\
-  \frac{T_{max}-T_0}{250\Gamma}+t_{max} & för & t^*_{max} \geq 2.0 \\
+  \frac{\frac{T_{max}-T_0}{625}+t^*_{max}}{\Gamma} & \text{för  }t^*_{max} \leq 0.5 \\
+  \frac{\frac{T_{max}-T_0}{250\left(3-t^*_{max}\right)}+t^*_{max}}{\Gamma} & \text{för  }0.5 < t^*_{max} < 2.0 \\
+  \frac{T_{max}-T_0}{250\Gamma}+t_{max} & \text{för  }t^*_{max} \geq 2.0 \\
   \end{cases}
 $$
 
