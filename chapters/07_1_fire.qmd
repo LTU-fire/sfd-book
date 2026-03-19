@@ -240,9 +240,9 @@ Avsvalningen beräknas utifrån den termiska trögheten och hur lång tid konstr
 
 $$
 T_{f}=\begin{cases}
-  T_{max}-625\left(t^*-t^*_{max}x\right) & för & t^*_{max} \leq 0.5 \\
-  T_{max}-250\left(3-t^*_{max}\right)\left(t^*-t^*_{max}x\right) & för & 0.5 < t^*_{max} < 2.0 \\
-  T_{max}-250\left(t^*-t^*_{max}x\right) & för & t^*_{max} \geq 2.0 \\
+  T_{max}-625\left(t^*-t^*_{max}x\right) & \text{för  }t^*_{max} \leq 0.5 \\
+  T_{max}-250\left(3-t^*_{max}\right)\left(t^*-t^*_{max}x\right) & \text{för  }0.5 < t^*_{max} < 2.0 \\
+  T_{max}-250\left(t^*-t^*_{max}x\right) & \text{för  }t^*_{max} \geq 2.0 \\
   \end{cases}
 $$
 
