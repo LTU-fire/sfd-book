@@ -206,12 +206,11 @@ $$
 
 Där 
 
-|-|--------:|:-----------------------------------------------|
-| | $A_o$ - | summan av arean för alla ventilationsöppningar |
-| | $h_o$ - | den viktade höjden på öppningarna enligt $h_{o}=A_v/w_o$ |
-| | $w_o$ - | den totala bredden på alla öppningar |
-| | $A_t$ - | den totala omslutningsarean inklusive öppningar |
-: {.borderless}
+&nbsp&nbsp $A_o$ - summan av arean för alla ventilationsöppningar           
+&nbsp&nbsp $h_o$ - den viktade höjden på öppningarna enligt $h_{o}=A_v/w_o$ 
+&nbsp&nbsp $w_o$ - den totala bredden på alla öppningar                     
+&nbsp&nbsp $A_t$ - den totala omslutningsarean inklusive öppningar          
+
 
 En öppningsfaktor på minst 0.02 (m$^½$) bör användas för att ta hänsyn till otätheter och läckage.
 
@@ -227,14 +226,9 @@ $$
 
 Där 
 
-$\lambda$
-: är värmeledningstalet för omgivande konstruktioner
-
-$\rho$
-: är densiteten för omgivande konstruktioner
-
-$c_p$
-: är den specifika värmen för omgivande konstruktioner
+&nbsp&nbsp $\lambda$ - är värmeledningstalet för omgivande konstruktioner
+&nbsp&nbsp $\rho$ - är densiteten för omgivande konstruktioner
+&nbsp&nbsp $c_p$ - är den specifika värmen för omgivande konstruktioner
 
 För omgivande konstruktioner med fler material finns beräkningsmetoder presenterade i EN 1991-1-2.
 
