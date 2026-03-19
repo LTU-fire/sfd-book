@@ -33,7 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/02_steel.html" rel="next">
+<link href="../chapters/07_fire.html" rel="next">
 <link href="../index.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -105,7 +105,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -153,32 +153,38 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/07_fire.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Dimensionerande brand</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/02_steel.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Stål</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Stål</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/03_timber.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Trä</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Trä</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/04_concrete.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Betong</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Betong</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/05_design.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Designstrategier</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Designstrategier</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/06_pbd.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Analytisk dimensionering</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Analytisk dimensionering</span></span></a>
   </div>
 </li>
     </ul>
@@ -200,7 +206,7 @@ window.Quarto = {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -222,7 +228,7 @@ window.Quarto = {
 
 
 <p>I det här avsnittet kommer vi att gå igenom lastberäkningar som är relevanta för brand.</p>
-<section id="lastberäkning" class="level2" data-number="1.1">
+<section id="lastberäkning" class="level2 page-columns page-full" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="lastberäkning"><span class="header-section-number">1.1</span> Lastberäkning</h2>
 <p>Samma konstruktion antar olika lastfall för samma konstruktion för att fånga upp olikheten i sannolikhet för att just den lasten uppstår i kombination med andra händelser. Anledningen till det är som ofta annars, kostnade som skulle bli för stor om vi alltid räknade med samma last oavsett.</p>
 <p>För en konstruktör är de två vanligaste lastfallen:</p>
@@ -250,10 +256,16 @@ E_{d,fi} = G_k + \psi_{1,2} Q_k
 </li>
 <li><span class="math inline">\(\psi_{1,2}\)</span> = partialkoefficient för det frekventa eller kvasipermanenta lastfallet (i Sverige gäller <span class="math inline">\(psi_1\)</span>)</li>
 </ul>
-<section id="utnyttjandegrad" class="level3" data-number="1.1.1">
+<section id="utnyttjandegrad" class="level3 page-columns page-full" data-number="1.1.1">
 <h3 data-number="1.1.1" class="anchored" data-anchor-id="utnyttjandegrad"><span class="header-section-number">1.1.1</span> Utnyttjandegrad</h3>
 <p>Vid brandteknisk dimensionering är det ofta relevant att arbeta med utnyttjandegrader istället för faktisk last. Anledningen är att konstruktionen redan dimensionerats för ULS och SLS innan det kommer till brand. För brand handlar det då mer om att dimensionera konstruktionens skydd och till det räcker ofta utnyttjandegraden bra.</p>
 <p>Utnyttjandegraden vid brand kan noteras som <span class="math inline">\(\mu_{fi}\)</span> och kan ha olika betydelse i olika dimensioneringssituationer och för olika material. Enkelt kan det beskrivas som:</p>
+<div id="tbl-utilization" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-utilization-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1.1: Översiktlig representation av hur utnyttjandegraden och hållfastheten vid brand hänger samman.
+</figcaption>
+<div aria-describedby="tbl-utilization-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
 <col style="width: 14%">
@@ -285,12 +297,49 @@ E_{d,fi} = G_k + \psi_{1,2} Q_k
 </tr>
 </tbody>
 </table>
+</div>
+</figure>
+</div>
 <p>Varje uttryck i tabellen kommer att förklaras närmare under respektive materialdel men ska i grunden läsas som att <span class="math inline">\(\mu_{fi}\)</span> beräknas utifrån de variabler som nämns i tabellens respektive funktion, i.e.&nbsp;som en funktion av <span class="math inline">\(k_{y,T}\)</span> för dragna och momentbelastade stålprofiler.</p>
 <p>För att beräkna <span class="math inline">\(\mu_{fi}\)</span> krävs att vi ställer upp ett antal förhållanden:</p>
 <ol type="1">
-<li>Lasten i brandlastfallet, <span class="math inline">\(E_{d,fi}\)</span>, motsvarar förhållandet mellan hållfastheten i brottlastfallet, <span class="math inline">\(R_{d}\)</span>,</li>
+<li><p>Förhållandet mellan dimensionerande last i brottlastfallet, <span class="math inline">\(E_{Rd}\)</span>, och brandlastfallet, <span class="math inline">\(E_{d,fi}\)</span>, skrivs som</p>
+<p><span class="math display">\[
+\eta_{fi}=\frac{E_{d,fi}}{E_{Rd}}
+\]</span></p>
+<p>Det här värdet kan antas i de fall det inte går att utreda vad som gäller, oftast vid befintliga byggnader. <span class="math inline">\(\eta_{fi}\)</span> sätts i dessa fall till 0.65 för stål och betong, och 0.6 för trä. Att trä är något lägre beror på materialets egentyngd.</p></li>
+<li><p>Lasten i brandlastfallet, <span class="math inline">\(E_{d,fi}\)</span>, kan också uttryckas i förhållande till dimensionerande last i brottlastfallet som</p>
+<p><span class="math display">\[
+E_{d,fi}=\eta_{fi} E_{Rd} = \mu_0 \eta_{fi} R_{d}
+\]</span></p>
+<p>eller, genom att anta att utnyttjandegraden vid ULS, <span class="math inline">\(\mu_0\)</span>, motsvarar förhållandet mellan lasten och hållfastheten vid ULS, dvs. <span class="math inline">\(\mu_0=E_{Rd}/R_{d}\)</span></p>
+<p><span class="math display">\[
+E_{d,fi}=\mu_0 \eta_{fi} R_{d}
+\]</span></p>
+<p>I de fall <span class="math inline">\(\mu_0\)</span> inte är känt bör det antas till 1.</p></li>
+<li><p>Utnyttjandegraden för brandfallet, <span class="math inline">\(\mu_{fi}\)</span>, som vi vill få fram är det samma som reduktionen av hållfasthet vid brand i förhållande till hållfastheten vid ULS</p>
+<p><span class="math display">\[
+R_{d,fi}=\mu_{fi} R_{d}
+\]</span></p></li>
+<li><p>För att konstruktionen ska vara säker vid brand krävs att lasten vid brand är lägre än den kvarvarande hållfastheten</p>
+<p><span class="math display">\[
+E_{d,fi} \leq R_{d,fi}
+\]</span></p></li>
 </ol>
-</section>
+<p>Utifrån dessa kan vi sedan ersätta <span class="math inline">\(E_{d,fi}\)</span> och <span class="math inline">\(R_{d,fi}\)</span> i punkt 4 med uttrycken i punkt 2 och 3 och få det nya uttrycket</p>
+<p><span class="math display">\[
+\mu_0 \eta_{fi} R_{d} \leq \mu_{fi} R_{d}
+\]</span></p>
+<p>I och med att <span class="math inline">\(R_d\)</span> finns på båda sidor tar värdena ut varandra och kvar blir</p>
+<p><span class="math display">\[
+\mu_0 \eta_{fi} \leq \mu_{fi}
+\]</span></p>
+<p>Elementets hållfasthet är alltså ok så länge som ovanstående uttryck är tillfredsställt. Det vi behöver veta för att ta fram utnyttjandegraden i brandfallet är alltså utnyttjandegraden i ULS, <span class="math inline">\(\mu_0\)</span>, och förhållandet mellan lastfallen <span class="math inline">\(\eta_{fi}\)</span>. Hållfasthetsreduktionen, eller maximala utnyttjandegraden vid brand, <span class="math inline">\(\mu_{fi}\)</span>, får alltså inte sjunka under det värdet.</p>
+<p>För olika material och dimensioneringssituationer ser <span class="math inline">\(\mu_{fi}\)</span> olika ut vilket visades i tabell <a href="06_pbd.html#tbl-utilization" class="quarto-xref"><span>7.1</span></a>.</p>
+
+<div class="no-row-height column-margin column-container"><div class="only-html">
+    <a href="https://numbas.mathcentre.ac.uk/question/147737/utilization/embed/?token=7ecca4a1-1f2b-4544-a83a-149c67943d6f" target="_blank" rel="noopener"> Övning: Utnyttjandegrad i brandfallet</a>
+</div></div></section>
 <section id="jämförelse" class="level3" data-number="1.1.2">
 <h3 data-number="1.1.2" class="anchored" data-anchor-id="jämförelse"><span class="header-section-number">1.1.2</span> Jämförelse</h3>
 <p>Brandlasten är normalt lägre än brottlastfallet.</p>
@@ -712,8 +761,8 @@ E_{d,fi} = G_k + \psi_{1,2} Q_k
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/02_steel.html" class="pagination-link" aria-label="Stål">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Stål</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/07_fire.html" class="pagination-link" aria-label="Dimensionerande brand">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Dimensionerande brand</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
