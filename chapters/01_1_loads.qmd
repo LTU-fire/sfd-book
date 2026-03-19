@@ -106,12 +106,3 @@ För olika material och dimensioneringssituationer ser $\mu_{fi}$ olika ut vilke
 
 ### Jämförelse
 
-Brandlasten är normalt lägre än brottlastfallet.
-
-För stål kan:
-
-$$
-\eta_{fi} \approx 0.65
-$$
-
-antas som maximal utnyttjandegrad.
