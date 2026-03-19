@@ -5,11 +5,6 @@ Vid förhöjda temperaturer reduceras både hållfasthet och styvhet, vilket inn
 
 Beräkningar av temperaturutveckling görs vanligtvis iterativt och lämpar sig därför väl för beräkning i exempelvis Excel eller motsvarande verktyg. Temperaturutvecklingen i stål bestäms stegvis över tiden. En typisk beräkning kan struktureras enligt tabellen nedan.
 
-``` {=html}
-<div class="column-margin only-html">
-    <a href="https://numbas.mathcentre.ac.uk/question/108549/stal-pelare-kritisk-temperatur" target="_blank" rel="noopener"> Övning: temperaturer i oskyddat stål</a>
-</div>
-```
 
 | Tidssteg | Brandtemperatur | Ståltemperatur | Material | Temperaturändring |
 |:--------:|:---------------:|:--------------:|:--------:|:-----------------:|
@@ -18,6 +13,12 @@ Beräkningar av temperaturutveckling görs vanligtvis iterativt och lämpar sig 
 | $t_2 = t_1 + \Delta t$ | $T_{f,2}$ | $T_{s,2} = T_{s,1} + \Delta T_{s,1}$ | $c_{s,2}(T_{s,2})$ | $\Delta T_{s,2}$ |
 | $\ldots$ | $\ldots$ | $\ldots$ | $\ldots$ | $\ldots$ |
 | $t_n = t_{n-1} + \Delta t$ | $T_{f,n}$ | $T_{s,n} = T_{s,n-1} + \Delta T_{s,n-1}$ | $c_{s,n}(T_{s,n})$ | $\Delta T_{s,n}$ |
+
+``` {=html}
+<div class="column-margin only-html">
+    <a href="https://numbas.mathcentre.ac.uk/question/108549/stal-pelare-kritisk-temperatur/embed/?token=dd4c504e-fc5d-4055-9d9e-66f65df30685" target="_blank" rel="noopener"> Övning: temperaturer i oskyddat stål</a>
+</div>
+```
 
 Tabellen fylls i rad för rad där varje tidssteg bygger på föregående.
 

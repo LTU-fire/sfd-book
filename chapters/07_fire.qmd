@@ -1,0 +1,6 @@
+# Dimensionerande brand
+
+I det här avsnittet kommer vi att gå igenom dimensionerande brand.
+
+
+{{< include 07_1_fire.qmd >}}

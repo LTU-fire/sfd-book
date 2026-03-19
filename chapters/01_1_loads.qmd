@@ -41,12 +41,67 @@ Utnyttjandegraden vid brand kan noteras som $\mu_{fi}$ och kan ha olika betydels
 | Betong   | $\text{f}(k_{y,T})$         | $\text{f}(\chi_{fi}k_{y,T})$   |
 | Stål     | $\text{f}(A_{eff},W_{eff})$ | $\text{f}(A_{eff},\chi_{eff})$ |
 | Trä      | $\text{f}(k_{y,T},A_{eff})$ | $\text{f}(k_{y,T},A_{eff})$    |
+: Översiktlig representation av hur utnyttjandegraden och hållfastheten vid brand hänger samman. {#tbl-utilization}
 
 Varje uttryck i tabellen kommer att förklaras närmare under respektive materialdel men ska i grunden läsas som att $\mu_{fi}$ beräknas utifrån de variabler som nämns i tabellens respektive funktion, i.e. som en funktion av $k_{y,T}$ för dragna och momentbelastade stålprofiler.
 
 För att beräkna $\mu_{fi}$ krävs att vi ställer upp ett antal förhållanden:
 
-1. Lasten i brandlastfallet, $E_{d,fi}$, motsvarar förhållandet mellan hållfastheten i brottlastfallet, $R_{d}$, 
+1.  Förhållandet mellan dimensionerande last i brottlastfallet, $E_{Rd}$, och brandlastfallet, $E_{d,fi}$, skrivs som 
+
+    $$
+    \eta_{fi}=\frac{E_{d,fi}}{E_{Rd}}
+    $$
+
+    Det här värdet kan antas i de fall det inte går att utreda vad som gäller, oftast vid befintliga byggnader. $\eta_{fi}$ sätts i dessa fall till 0.65 för stål och betong, och 0.6 för trä. Att trä är något lägre beror på materialets egentyngd.
+
+2.  Lasten i brandlastfallet, $E_{d,fi}$, kan också uttryckas i förhållande till dimensionerande last i brottlastfallet som
+
+    $$
+    E_{d,fi}=\eta_{fi} E_{Rd} = \mu_0 \eta_{fi} R_{d}
+    $$
+
+    eller, genom att anta att utnyttjandegraden vid ULS, $\mu_0$, motsvarar förhållandet mellan lasten och hållfastheten vid ULS, dvs. $\mu_0=E_{Rd}/R_{d}$
+
+    $$
+    E_{d,fi}=\mu_0 \eta_{fi} R_{d}
+    $$
+
+    I de fall $\mu_0$ inte är känt bör det antas till 1.
+
+3.  Utnyttjandegraden för brandfallet, $\mu_{fi}$, som vi vill få fram är det samma som reduktionen av hållfasthet vid brand i förhållande till hållfastheten vid ULS
+
+    $$
+    R_{d,fi}=\mu_{fi} R_{d}
+    $$
+
+4.  För att konstruktionen ska vara säker vid brand krävs att lasten vid brand är lägre än den kvarvarande hållfastheten
+
+    $$
+    E_{d,fi} \leq R_{d,fi}
+    $$
+
+Utifrån dessa kan vi sedan ersätta $E_{d,fi}$ och $R_{d,fi}$ i punkt 4 med uttrycken i punkt 2 och 3 och få det nya uttrycket
+
+$$
+\mu_0 \eta_{fi} R_{d} \leq \mu_{fi} R_{d}
+$$
+
+I och med att $R_d$ finns på båda sidor tar värdena ut varandra och kvar blir 
+
+$$
+\mu_0 \eta_{fi} \leq \mu_{fi}
+$$
+
+Elementets hållfasthet är alltså ok så länge som ovanstående uttryck är tillfredsställt. Det vi behöver veta för att ta fram utnyttjandegraden i brandfallet är alltså utnyttjandegraden i ULS, $\mu_0$, och förhållandet mellan lastfallen $\eta_{fi}$. Hållfasthetsreduktionen, eller maximala utnyttjandegraden vid brand, $\mu_{fi}$, får alltså inte sjunka under det värdet. 
+
+För olika material och dimensioneringssituationer ser $\mu_{fi}$ olika ut vilket visades i tabell [-@tbl-utilization].
+
+``` {=html}
+<div class="column-margin only-html">
+    <a href="https://numbas.mathcentre.ac.uk/question/147737/utilization/embed/?token=7ecca4a1-1f2b-4544-a83a-149c67943d6f" target="_blank" rel="noopener"> Övning: Utnyttjandegrad i brandfallet</a>
+</div>
+```
 
 
 ### Jämförelse
