@@ -10,7 +10,7 @@ book:
   search: true
   repo-url: https://github.com/LTU-fire/sfd-book/
   repo-subdir: chapters
-  repo-branch: master
+  repo-branch: main
   repo-actions: [issue, source]
 
 
