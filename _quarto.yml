@@ -14,7 +14,7 @@ book:
   repo-actions: [issue]
   url: https://LTU-fire.github.io/sfd-book/
   sidebar:
-    logo: ../figures/dragonLogo.png
+    logo: figures/dragonLogo.png
     search: true
   sharing: [twitter, facebook, linkedin]
 
