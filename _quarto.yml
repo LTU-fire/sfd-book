@@ -5,14 +5,18 @@ project:
 number-sections: true
 
 book:
-  title: "Brandteknisk dimensionering av bärande konstruktioner"
+  title: "Brandutsatta konstruktioner"
   author: "Joakim Sandström, LTU"
-  search: true
+  
   repo-url: https://github.com/LTU-fire/sfd-book/
   repo-subdir: chapters
   repo-branch: main
-  repo-actions: [issue, source]
-
+  repo-actions: [issue]
+  url: https://LTU-fire.github.io/sfd-book/
+  sidebar:
+    logo: ../figures/dragonLogo.png
+    search: true
+  sharing: [twitter, facebook, linkedin]
 
   chapters:
     - index.qmd
