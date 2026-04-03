@@ -1,0 +1,101 @@
+## Övergripande strategi
+
+För att lösa ett brandtekniskt problem behöver vi förstå hur det ska ställas upp. Förenklat kan sägas att för att klara brandfallet så behöver
+
+$$
+E_{d,fi} \leq R_{d,fi}
+$$ {#eq-5_A}
+
+dvs. lasten i brandfallet, $E_{d,fi}$, behöver vara mindre än restkapaciteten, $R_{d,fi}$, för att konstruktionen inte gå till brott. 
+
+### Utnyttjandegrad
+
+Den dimensionerande lasten i brandfallet, $E_{d,fi}$, definieras normalt som det frekventa, eller kvasipermanenta lastvärdet. I Sverige tillämpar vi det frekventa lastvärdet (mer om det i avsnittet [@loadcalc]) vilket innebär att lasten i brandfallet beräknas som
+
+$$
+E_{d,fi} = G_k + \psi_{1} Q_{k,1} + \psi_{2} Q_{k,2}
+$$ {#eq-5_B}
+
+Reduktionen av lasten i brandfallet i förhållande till brottlastfallet kan skrivas som $\eta_{fi}$ eller
+
+$$
+E_{d,fi} = \eta_{fi} E_{Rd}
+$$ {#eq-5_C}
+
+där
+
+$$
+\eta_{fi}=\frac{E_{d,fi}}{E_{Rd}}=
+    \frac{G_k + \psi_{1} Q_{k,1}}{max\begin{cases}
+        \gamma_d\gamma_{\text{G,j,sup}}G_{\text{k,j,sup}} \\
+        \gamma_d \left( \xi \gamma_{\text{G,j,sup}}G_{\text{k,j,sup}}+\gamma_{\text{Q,1}}Q_{\text{k,1}}\right) 
+\end{cases}}
+$$ {#eq-5_D}
+
+För betong $\eta_{fi}$ antas som 0.7, för stål 0.65 och för trä 0.6 om inget annat är känt. Det bygger på förhållandet mellan egentyngden, $G_k$, och den variabla lasten, $Q_k$, där betongkonstruktioner oftast har större andel egentyngd än träkonstruktioner och därför får ett större värde på förhållandet (om inget annat är känt).
+
+| Konstruktionsmaterial | Rimligt $\eta_{fi}$ | $\eta_{fi}$ (om inget annat är känt) |
+|:----------------------|:-------------------:|:------------------------------------:|
+| Betong                | 0.5 - 0.7           | 0.7                                  |
+| Stål                  | 0.3 - 0.6           | 0.65                                 |
+| Trä                   | 0.3 - 0.5           | 0.6                                  |
+: Förhållandet mellan lastfallet brand och brott, $\eta_{fi}$ {#tbl-eta}
+
+Reduktionen av kapaciteten vid brand kan skrivas som $\mu_{fi}$, eller förhållandet mellan kapaciteten vid brott- och brandlastfallet
+
+$$
+R_{d,fi}=\mu_{fi} R_d
+$$ {#eq-5_E}
+
+Utifrån dessa samband kan vi beräkna den tillåtna reduktionen av kapaciteten vid brand, $\mu_{fi}$, i följande steg
+
+1.  Lasten i brandlastfallet, $E_{d,fi}$, kan också uttryckas i förhållande till dimensionerande last i brottlastfallet som
+
+    $$
+    E_{d,fi}=\eta_{fi} E_{Rd} = \mu_0 \eta_{fi} R_{d}
+    $$  {#eq-5_F}
+
+    eller, genom att anta att utnyttjandegraden vid ULS, $\mu_0$, motsvarar förhållandet mellan lasten och hållfastheten vid ULS, dvs. $\mu_0=E_{Rd}/R_{d}$
+
+    $$
+    E_{d,fi}=\mu_0 \eta_{fi} R_{d}
+    $$ {#eq-5_G}
+
+    I de fall $\mu_0$ inte är känt bör det antas till 1.
+
+2.  Utnyttjandegraden för brandfallet, $\mu_{fi}$, som vi vill få fram är det samma som reduktionen av hållfasthet vid brand i förhållande till hållfastheten vid ULS
+
+    $$
+    R_{d,fi}=\mu_{fi} R_{d}
+    $$ {#eq-5_H}
+
+Genom att ersätta $E_{d,fi}$ och $R_{d,fi}$ i ekvation [-@eq-5_A] med uttrycken i ekvation [-@eq-5_G] och [-@eq-5_H] ges det nya uttrycket
+
+$$
+\mu_0 \eta_{fi} R_{d} \leq \mu_{fi} R_{d}
+$$ {#eq-5_J}
+
+I och med att $R_d$ finns på båda sidor tar värdena ut varandra och kvar blir 
+
+$$
+\mu_0 \eta_{fi} \leq \mu_{fi}
+$$ {#eq-5_K}
+
+Elementets restkapacitet är alltså ok så länge som uttrycket i ekvation -@eq:5_K är tillfredsställt. Det vi behöver veta för att ta fram utnyttjandegraden i brandfallet är alltså utnyttjandegraden i ULS, $\mu_0$, och förhållandet mellan lastfallen $\eta_{fi}$. Hållfasthetsreduktionen, eller maximala utnyttjandegraden vid brand, $\mu_{fi}$, får alltså inte sjunka under det värdet. 
+
+För olika material och dimensioneringssituationer ser $\mu_{fi}$ olika ut vilket visas i tabell [-@tbl-utilization].
+
+|          |        Drag/moment          |              Tryck             |
+|:---------|:---------------------------:|:------------------------------:|
+| Betong   | $\text{f}(k_{y,T})$         | $\text{f}(\chi_{fi}k_{y,T})$   |
+| Stål     | $\text{f}(A_{eff},W_{eff})$ | $\text{f}(A_{eff},\chi_{eff})$ |
+| Trä      | $\text{f}(k_{y,T},A_{eff})$ | $\text{f}(k_{y,T},A_{eff})$    |
+: Översiktlig representation av hur utnyttjandegraden och hållfastheten vid brand hänger samman. {#tbl-utilization}
+
+``` {=html}
+<div class="column-margin only-html">
+    <a href="https://numbas.mathcentre.ac.uk/question/147737/utilization/embed/?token=7ecca4a1-1f2b-4544-a83a-149c67943d6f" target="_blank" rel="noopener"> Övning: Utnyttjandegrad i brandfallet</a>
+</div>
+```
+
+Varje uttryck i tabellen kommer att förklaras närmare under respektive materialdel men ska i grunden läsas som att $\mu_{fi}$ beräknas utifrån de variabler som nämns i tabellens respektive funktion, i.e. som en funktion av $k_{y,T}$ för dragna och momentbelastade stålprofiler.

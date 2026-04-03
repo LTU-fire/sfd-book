@@ -1,0 +1,40 @@
+## Dimensioneringsdomäner
+
+Vid brandteknisk dimensionering finns tre grundläggande domäner:
+
+1.    Tidsdomänen,
+2.    Hållfasthetsdomänen, och
+3.    Temperaturdomänen.
+
+Det vanligaste är att börja i Hållfasthetsdomänen men domänerna har sina olika styrkor med avseende på olika material.
+
+### Tidsdomänen
+
+Dimensionering i tidsdomänen kan skrivas som
+
+$$
+t_R \leq t_{str}
+$$ {#eq-50_A}
+
+Tiden till brott, $t_{str}$ ska vara större än den brandmotståndstid, $t_R$, som antas för ett element. Genom att jämföra den kvarvarande relativa kapacieteten, $\mu_{fi}$, med utnyttjandegraden, $\mu_0 \eta_{fi}$, går det att se när den kvarvarande relativa kapaciteten blir så låg att elementet kan förväntas gå till brott. Figur xx visar ett exempel där $\mu_{fi}$ reduceras över tid ner till den beräknade utnyttjandegraden, $\mu_0 \eta_{fi}$,
+
+
+### Hållfasthetsdomänen
+
+Vid dimensionering i hållfasthetsdomänen jämförs den kvarvarande relativa kapaciteten, $\mu_{fi}$, med den behövda, $\mu_0 \eta_{fi}$, vid den brandmotståndstid som är given, $t_R$.
+
+$$
+\mu_0 \eta_{fi} \leq \mu_{fi} \left( t_R \right) 
+$$ {#eq-50_B}
+
+Dimensioneringen illustreras i figur yy
+
+### Temperaturdomänen
+
+Temperaturdomänen används oftast i fallet med stålkonstruktioner då det är relativt sett enkelt att ta fram en kritisk temperatur, $T_{crit}$, över vilken ett element kan förväntas gå till brott. Dimensioneringen ut på att säkerställa, med olika former av skydd, att den faktiska temperaturen i stålen håller sig under $T_{crit}$.
+
+$$
+T_{s}\left( t_R \right)\leq T_{crit}  
+$$ {#eq-50_C}
+
+Dimensioneringen illustreras i figur zz
