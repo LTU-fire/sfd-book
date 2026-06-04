@@ -16,7 +16,7 @@ Beräkningar av temperaturutveckling görs vanligtvis iterativt och lämpar sig 
 
 ``` {=html}
 <div class="column-margin only-html">
-    <a href="https://numbas.mathcentre.ac.uk/question/108549/stal-pelare-kritisk-temperatur/embed/?token=dd4c504e-fc5d-4055-9d9e-66f65df30685" target="_blank" rel="noopener"> Övning: temperaturer i oskyddat stål</a>
+    <a href="https://numbas.mathcentre.ac.uk/question/87700/temperaturberakning-i-stalprofil/embed/?token=14b12467-2bd9-4f22-b0dd-3fa6f9b40875" target="_blank" rel="noopener"> Övning: temperaturer i oskyddat stål</a>
 </div>
 ```
 
@@ -28,10 +28,13 @@ $$
 \Delta T_{s,i}=k_{sh}\frac{A_m/V}{\rho c_{s,i-1}}\left(\varepsilon \sigma \left( \left(T_{f,i}+273\right)^4-\left(T_{f,i}+273\right)^4 \right)+h_c\left(T_{f,i}-T_{s,i-1}\right)\right)\Delta t
 $$
 
-### Oskyddat stål
+## Ståltemperatur vs standardbrand
 
-Temperaturökningen i oskyddat stål kan beräknas enligt:
+[Lägg in interaktiv figur med ståltemperaturer i förhållande till sektionsfaktor och isoleringstjocklek]
 
+### Skyddat stål
+
+När det kommer till skyddat stål ändras förutsättningarna. 
 $$
 \Delta T_s = \frac{A_m/V}{\rho c} (T_g - T_s)\Delta t
 $$

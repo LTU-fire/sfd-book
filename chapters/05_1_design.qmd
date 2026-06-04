@@ -19,12 +19,6 @@ $$ {#eq-5_B}
 Reduktionen av lasten i brandfallet i förhållande till brottlastfallet kan skrivas som $\eta_{fi}$ eller
 
 $$
-E_{d,fi} = \eta_{fi} E_{Rd}
-$$ {#eq-5_C}
-
-där
-
-$$
 \eta_{fi}=\frac{E_{d,fi}}{E_{Rd}}=
     \frac{G_k + \psi_{1} Q_{k,1}}{max\begin{cases}
         \gamma_d\gamma_{\text{G,j,sup}}G_{\text{k,j,sup}} \\
@@ -41,7 +35,7 @@ För betong $\eta_{fi}$ antas som 0.7, för stål 0.65 och för trä 0.6 om inge
 | Trä                   | 0.3 - 0.5           | 0.6                                  |
 : Förhållandet mellan lastfallet brand och brott, $\eta_{fi}$ {#tbl-eta}
 
-Den tillåtna kvarvarande relativa kapaciteten vid brand kan skrivas som $\mu_{fi}$ och kan ses som förhållandet mellan kapaciteten vid brottlastfallet och och den minsta kvarvarande kapaciteten i brandlastfallet
+Den tillåtna kvarvarande relativa kapaciteten för stål vid brand kan skrivas som $\mu_{fi}$ och kan ses som förhållandet mellan kapaciteten vid brottlastfallet och och den minsta kvarvarande kapaciteten i brandlastfallet
 
 $$
 R_{d,fi}=\mu_{fi} R_d
@@ -75,7 +69,21 @@ Utifrån dessa samband kan vi beräkna $\mu_{fi}$ i följande steg
     \mu_0 \eta_{fi} \leq \mu_{fi}
     $$ {#eq-5_K}
 
-Elementets restkapacitet är alltså ok så länge som uttrycket i ekvation -@eq:5_K är tillfredsställt. Det vi behöver veta för att ta fram utnyttjandegraden i brandfallet är alltså utnyttjandegraden i ULS, $\mu_0$, och förhållandet mellan lastfallen $\eta_{fi}$. Hållfasthetsreduktionen, eller minimalt tillåtna kvarvarande relativa kapaciteten, $\mu_{fi}$, får alltså inte sjunka under det värdet. 
+Elementets restkapacitet är alltså ok så länge som uttrycket i ekvation [-@eq:5_K] är tillfredsställt. Det vi behöver veta för att ta fram utnyttjandegraden i brandfallet är alltså utnyttjandegraden i ULS, $\mu_0$, och förhållandet mellan lastfallen $\eta_{fi}$. Hållfasthetsreduktionen, eller minimalt tillåtna kvarvarande relativa kapaciteten, $\mu_{fi}$, får alltså inte sjunka under det värdet. 
+
+För trä och betong behöver ovanstående justeras med hänsyn till materialkoefficienter. Det är något mer ovanligt och opraktiskt då beräkningen ofta är ett steg i ledet att påbörja dimensionering i temperaturdomänen vilket inte görs för trä. Det finns poänger att ta fram utnyttjandegraden för att få jämförelsetal men för praktisk dimensionering är det absolut viktigast när stål är inblandat då det är ett snabbt sätt att kunna beräkna kritiska temperaturer.
+
+För betong kan förenklat antas att en justering av armeringsstålets kvalitet räcker då hävarmen och betongkvaliteten normalt inte påverkar så mycket.
+
+$$
+\mu_{fi} \approx \frac{\gamma_{s}}{\gamma_{C}} \eta_{fi} \mu_0
+$$
+
+För trä finns fler variabler att ta hänsyn till och $\mu_{fi}$ ser då snarare ut enligt
+
+$$
+\mu_{fi} \approx \frac{\gamma_{M0}}{\gamma_{M,fi}} \frac{k_{fi} k_{mod,fi}}{k_{mod}} \eta_{fi} \mu_0
+$$
 
 För olika material och dimensioneringssituationer ser $\mu_{fi}$ olika ut vilket visas i tabell [-@tbl-utilization].
 

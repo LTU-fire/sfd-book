@@ -1,22 +1,62 @@
 ## Pelare vid brand
 
-### Tryckkapacitet
+För pelare med tvärsnittsklass 1, 2 och 3 beräknas tryckkapaciteten som
 
 $$
-N_{Rd,fi} = \chi_\theta k_y(\theta) N_{Rd}
+N_{Rd,fi,0} = \chi_{fi}  k_{y,T}  f_y  A
 $$
 
-### Slankhet
+där reduktionsfaktorn (\chi_{fi}) beräknas enligt
 
 $$
-\lambda_\theta = \lambda \sqrt{\frac{k_y(\theta)}{k_E(\theta)}}
+\chi_{fi} = \frac{1}{\phi + \sqrt{\phi^2 - \lambda_{fi}^2}}
 $$
 
-### Kritisk temperatur
+där
 
-Beräknas iterativt eftersom både:
+$$
+\phi = \frac{1}{2}\left(1 + \alpha \lambda_{fi} + \lambda_{fi}^2\right)
+$$
 
-- hållfasthet  
-- styvhet  
+och
 
-påverkas av temperatur.
+$$
+\alpha = 0,65\sqrt{\frac{235}{f_y}}
+$$
+
+Slankheten vid brand, $\lambda_{fi}$, beräknas utifrån slankheten i kallt tillstånd, $\bar{\lambda}$, samt reduktionsfaktorerna $k_{y,T}$ och $k_{E,T}$ vid förhöjd temperatur:
+
+$$
+\bar{\lambda}_{fi,T} = \bar{\lambda}\sqrt{\frac{k_{y,T}}{k_{E,T}}}
+$$
+
+där $\bar{\lambda}$ beräknas som
+
+$$
+\bar{\lambda}=\sqrt{\frac{A f_y}{N_{cr}}}=\sqrt{\frac{A f_y}{\pi^2\dfrac{ E I}{(\beta L)^2}}}
+$$
+
+där $\beta L$ är den effektiva knäcklängden för pelaren, $A$ tvärsnittets area, $E$ elasticitetsmodulen och $I$ är yttröghetsmomentet. Knäcklängden bestäms utifrån Eulers knäckfall, se figuren nedan.
+
+[lägg in figur på eulerknäckningar]
+
+### Bestämning av kritisk temperatur
+
+Genom att beräkna $\mu_{fi,0}$ och $\chi_{fi,0}$ för $T_s$ = 20°C kan den kritiska temperaturen för pelaren bestämmas iterativt enligt följande:
+
+| $\bar{\lambda}_{fi,T} =\bar{\lambda}\sqrt{\dfrac{k_{y,T}}{k_{E,T}}}$ | $\chi_{fi,T}$ | $k_{y,T}=\dfrac{\mu_{fi,0}\chi_{fi,0}}{\chi_{fi,T}}$  | $T_s\left(k_{y,T}\right)$ |
+|:---------------------------:|:-------------:|:--------------------------------:|:--------------:|
+| ...  | ...           | ... | ...            |
+
+``` {=html}
+<div class="column-margin only-html">
+    <a href="https://numbas.mathcentre.ac.uk/question/108549/stal-pelare-kritisk-temperatur/embed/?token=dd4c504e-fc5d-4055-9d9e-66f65df30685" target="_blank" rel="noopener"> Övning: kritisk temperatur för stålpelare</a>
+</div>
+```
+
+
+Den första raden beräknas för en temperatur på 20°C. $T_s\left(k_{y,T}\right)$ är ståltemperaturen som motsvarar det $k_{y,T}$ som räknats fram i rutan innan. Beräkningen av $\lambda_{fi,T}$ på efterföljande rader utförs med temperaturen i kolumnen längst ute till höger från föregående rad. Iterationen fortsätter tills $T_s\left(k_{y,T}\right)$ konvergerar.
+
+Det är värt att notera att beräkningarna av $\mu_{fi,0}$ och $\chi_{fi,0}$ kan variera beroende på om konstruktören har tillhandahållit ett värde på $\mu_{fi,0}$. Utnyttjandegraden $\mu_{fi,0}$ beräknas ofta som förhållandet mellan olyckslast och bärförmåga i kallt tillstånd, motsvarande brottlastfallet. Skillnaden mot branddimensionering är relativt liten, men det kan vara lämpligt att kontrollera med den som tillhandahållit utnyttjandegraderna vilken metod som använts.
+
+Skillnaden uppstår genom valet av $\alpha$ och därmed $\phi$ i beräkningen av $\chi_{fi,0}$ för brandfallet jämfört med $\chi_{LT}$ för brottlastfallet.

@@ -22,10 +22,10 @@ book:
     - index.qmd
     - chapters/01_loads.qmd
     - chapters/07_fire.qmd
+    - chapters/05_design.qmd
     - chapters/02_steel.qmd
     - chapters/03_timber.qmd
     - chapters/04_concrete.qmd
-    - chapters/05_design.qmd
     - chapters/06_pbd.qmd
 
   
@@ -35,3 +35,6 @@ format:
   pdf:
     documentclass: scrreprt
     fontfamily: Garamond
+
+execute:
+  freeze: auto 

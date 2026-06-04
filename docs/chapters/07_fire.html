@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Dimensionerande brand – Brandteknisk dimensionering av bärande konstruktioner</title>
+<title>2&nbsp; Dimensionerande brand – Brandutsatta konstruktioner</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,7 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/02_steel.html" rel="next">
+<link href="../chapters/05_design.html" rel="next">
 <link href="../chapters/01_loads.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -130,9 +130,39 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../figures/dragonLogo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../figures/dragonLogo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Brandteknisk dimensionering av bärande konstruktioner</a> 
+      <a href="../">Brandutsatta konstruktioner</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/LTU-fire/sfd-book/tree/main/chapters/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <div class="dropdown">
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
+              <i class="bi bi-facebook pe-1"></i>
+            Facebook
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
+              <i class="bi bi-linkedin pe-1"></i>
+            LinkedIn
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -162,26 +192,26 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../chapters/05_design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Designstrategier</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../chapters/02_steel.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Stål</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Stål</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/03_timber.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Trä</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Trä</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../chapters/04_concrete.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Betong</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../chapters/05_design.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Designstrategier</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Betong</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -204,9 +234,10 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#nominella-bränder" id="toc-nominella-bränder" class="nav-link" data-scroll-target="#nominella-bränder"><span class="header-section-number">2.1.1</span> Nominella bränder</a></li>
   <li><a href="#naturliga-bränder" id="toc-naturliga-bränder" class="nav-link" data-scroll-target="#naturliga-bränder"><span class="header-section-number">2.1.2</span> Naturliga bränder</a></li>
+  <li><a href="#fire-severity" id="toc-fire-severity" class="nav-link" data-scroll-target="#fire-severity"><span class="header-section-number">2.1.3</span> Fire severity</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/LTU-fire/sfd-book/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -396,10 +427,10 @@ t_{end}=\frac{E_{tot}}{{\dot Q}_{max}}
 <p><span class="math display">\[
 E_{tot}=A_t q^{''}_{fl}
 \]</span></p>
-<p>I oavnstående är <span class="math inline">\(m\)</span> förbränningsfaktorn, <span class="math inline">\(\Delta H_u\)</span> energiinnehållet i trä, <span class="math inline">\(A_o\)</span> summan av öppningsareorna, <span class="math inline">\(h_o\)</span> öppningarnas viktade höjd, <span class="math inline">\(A_t\)</span> den totala omslutningsarean och <span class="math inline">\(q^{''}_{fl}\)</span> är brandbelastningen per m² omslutningarea.</p>
-<p>Genom att ersätta <span class="math inline">\(E_{tot}\)</span> och <span class="math inline">\({\dot Q}_{max}\)</span> och översätta <span class="math inline">\(t_{end}\)</span> från sekunder till timmar kan tiden till det att avsvalningen påbörjas skrivas som</p>
+<p>I ovanstående är <span class="math inline">\(m\)</span> förbränningsfaktorn, <span class="math inline">\(\Delta H_u\)</span> energiinnehållet i trä, <span class="math inline">\(A_o\)</span> summan av öppningsareorna, <span class="math inline">\(h_o\)</span> öppningarnas viktade höjd, <span class="math inline">\(A_t\)</span> den totala omslutningsarean och <span class="math inline">\(q^{''}_{fl}\)</span> är brandbelastningen per m² omslutningarea.</p>
+<p>Genom att ersätta <span class="math inline">\(E_{tot}\)</span> och <span class="math inline">\({\dot Q}_{max}\)</span> och översätta <span class="math inline">\(t_{max}\)</span> från sekunder till timmar kan tiden till det att avsvalningen påbörjas skrivas som</p>
 <p><span class="math display">\[
-t_{end}=\frac{1}{3600} \frac{E_{tot}}{{\dot Q}_{max}}=
+t_{max}=\frac{1}{3600} \frac{E_{tot}}{{\dot Q}_{max}}=
 \frac{1}{3600} \frac{A_t q^{''}_{fl}}{0.1 m \Delta H_u A_o \sqrt{h_o}}=\frac{1}{3600} \frac{q^{''}_{fl}}{0.1 m \Delta H_u \frac{A_o \sqrt{h_o}}{A_t}}
 \]</span></p>
 <p>Med den rekommenderade förbränningsfaktorn, <span class="math inline">\(m\)</span> = 0.8 och <span class="math inline">\(\Delta H_u\)</span> = 17.5 MJ/kgK samtidigt som öppningsfaktorn, <span class="math inline">\(O\)</span>, kan ersätta det som har med ventilationen att göra enligt</p>
@@ -408,9 +439,9 @@ O=\frac{A_o \sqrt{h_o}}{A_t}
 \]</span></p>
 <p>kan ekvationen förenklas till</p>
 <p><span class="math display">\[
-t_{end}=\frac{0.0002 q^{''}_{fl}}{O}
+t_{max}=\frac{0.0002 q^{''}_{fl}}{O}
 \]</span></p>
-<p>Vilket kan användas för att beräkna tiden till det att avsvalningen påbörjas, <span class="math inline">\(t_{end}\)</span>, i timmar.</p>
+<p>Vilket kan användas för att beräkna tiden till det att avsvalningen påbörjas, <span class="math inline">\(t_{max}\)</span>, i timmar.</p>
 <section id="avancerade-brandmodeller" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="avancerade-brandmodeller">Avancerade brandmodeller</h4>
 <p>Naturlig brand kan beräknas på många sätt. Oavsett vilket brandrum och brand kan en avancerad modell användas. Brandförloppet och temperaturutvecklingen ska beräknas ur värme- och massbalansekvationer vilket är det normala för alla typer av tvåzonsmodeller och CFD-koder. Vid användning av CFD-koder bör försiktighet tillämpas i fråga om övertända bränder då dessa inte är framtagna för att klara den typen av beräkning på ett bra sätt men också då beräkningarna blir väldigt känsliga på grund av att brandens placering spelar stor roll för den resulterande temperatur-påkänningen mot ytor. CFD-koder bör därför bara användas i fall där brandens är väl definierad i rummet eller där direkt påverkan från den lokala branden kan ignoreras.</p>
@@ -455,12 +486,68 @@ Figure&nbsp;2.4: Gammafaktorns skalningsfuntion
 \]</span></p>
 <p>Öppningsfaktorn och den termiska trögheten viktas mot ett referensvärde, <span class="math inline">\(O_{ref}\)</span> och <span class="math inline">\(O_{ref}\)</span>. För öppningsfaktorn är referensvärdet, <span class="math inline">\(O_{ref}\)</span> = 0.04 m¯¹ och för den termiska trögheten, <span class="math inline">\(b_{ref}\)</span> = 1160 J/m²s<span class="math inline">\(^½\)</span>K. För rum med egenskaper som motsvarar <span class="math inline">\(O_{ref}\)</span> och <span class="math inline">\(b_{ref}\)</span> kommer temperaturkurvan motsvara den hos standardbranden. För övriga rum kommer temperaturökningen vara långsammare eller snabbare.</p>
 </section>
-<section id="öppningsfaktorn-gamma" class="level5 unnumbered">
-<h5 class="unnumbered anchored" data-anchor-id="öppningsfaktorn-gamma">Öppningsfaktorn, <span class="math inline">\(\Gamma\)</span></h5>
-
-
+<section id="öppningsfaktorn-o" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="öppningsfaktorn-o">Öppningsfaktorn, <span class="math inline">\(O\)</span></h5>
+<p>Öppningsfaktorn kan ses som ett mått på hur snabb luftomsättningen kan förväntas vara i ett rum. Ett stort värde på O ger stor luftomsättning med följden att branden både kan uppnå större effekt snabbare och kylas av snabbare.</p>
+<p>Öppningsfaktorn, <span class="math inline">\(O\)</span>, beräknas som</p>
+<p><span class="math display">\[
+O=\frac{A_o \sqrt{h_o}}{A_t}
+\]</span></p>
+<p>Där</p>
+<p>&nbsp;&nbsp; <span class="math inline">\(A_o\)</span> - summan av arean för alla ventilationsöppningar<br>
+&nbsp;&nbsp; <span class="math inline">\(h_o\)</span> - den viktade höjden på öppningarna enligt <span class="math inline">\(h_{o}=A_o/w_o\)</span><br>
+&nbsp;&nbsp; <span class="math inline">\(w_o\)</span> - den totala bredden på alla öppningar<br>
+&nbsp;&nbsp; <span class="math inline">\(A_t\)</span> - den totala omslutningsarean inklusive öppningar</p>
+<p>En öppningsfaktor på minst 0.02 (m<span class="math inline">\(^½\)</span>) bör användas för att ta hänsyn till otätheter och läckage.</p>
+</section>
+<section id="den-termiska-trögheten-b" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="den-termiska-trögheten-b">Den termiska trögheten, <span class="math inline">\(b\)</span></h5>
+<p>Den termiska trögheten är i stället ett mått på hur mycket energi som kan tas upp av, och lagras av omgivande konstruktioner. En betongvägg kan ta upp mycket energi och ger därför ett högre värde på b medan en lättkonstruktion med gipsskivor och stenullsisolering håller kvar värmen i rummet med ett lågt värde på <span class="math inline">\(b\)</span>.</p>
+<p>Den termiska trögheten, <span class="math inline">\(b\)</span>, beräknas som</p>
+<p><span class="math display">\[
+b=\sqrt{\lambda \rho c_p}
+\]</span></p>
+<p>Där</p>
+<p>&nbsp;&nbsp; <span class="math inline">\(\lambda\)</span> - är värmeledningstalet för omgivande konstruktioner<br>
+&nbsp;&nbsp; <span class="math inline">\(\rho\)</span> - är densiteten för omgivande konstruktioner<br>
+&nbsp;&nbsp; <span class="math inline">\(c_p\)</span> - är den specifika värmen för omgivande konstruktioner</p>
+<p>För omgivande konstruktioner med fler material finns beräkningsmetoder presenterade i EN 1991-1-2.</p>
+</section>
+<section id="avsvalning" class="level5 unnumbered">
+<h5 class="unnumbered anchored" data-anchor-id="avsvalning">Avsvalning</h5>
+<p>Avsvalningen beror till stor del på den termiska trögheten hos omgivande konstruktioner och hur länge dessa värmts upp. För att inte komplicera allt för mycket antogs avsvalningen vara linjär. Detta, då det bedömdes att den temperatur då eventuell inbromsning i avsvalningen kommer vid så låga temperaturer att de i praktiken inte påverkar konstruktionerna och därför mer komplicerar beräkningarna.</p>
+<p>Avsvalningen beräknas utifrån den termiska trögheten och hur lång tid konstruktionerna har värmts upp. Temperaturen i avsvalningsfasen beräknas normalt som</p>
+<p><span class="math display">\[
+T_{f}=\begin{cases}
+&nbsp; T_{max}-625\left(t^*-t^*_{max}x\right) &amp; \text{för  }t^*_{max} \leq 0.5 \\
+  T_{max}-250\left(3-t^*_{max}\right)\left(t^*-t^*_{max}x\right) &amp; \text{för  }0.5 &lt; t^*_{max} &lt; 2.0 \\
+  T_{max}-250\left(t^*-t^*_{max}x\right) &amp; \text{för  }t^*_{max} \geq 2.0 \\
+  \end{cases}
+\]</span></p>
+<p>Genom att anta att <span class="math inline">\(T_f\)</span> har återgått till <span class="math inline">\(T_0\)</span> kan tiden till avslutad avsvalning, <span class="math inline">\(t_{cool}\)</span> beräknas. Genom att beräkna <span class="math inline">\(t_{cool}\)</span> kan sedan temperaturen under avsvalningsfasen interpoleras för alla tider mellan <span class="math inline">\(t_{max}\)</span> och <span class="math inline">\(t_{cool}\)</span> genom att anta att temperaturen vid <span class="math inline">\(t_{cool}\)</span> är 20°C.</p>
+<p><span class="math display">\[
+t_{cool}=\begin{cases}
+&nbsp; \frac{\frac{T_{max}-T_0}{625}+t^*_{max}}{\Gamma} &amp; \text{för  }t^*_{max} \leq 0.5 \\
+  \frac{\frac{T_{max}-T_0}{250\left(3-t^*_{max}\right)}+t^*_{max}}{\Gamma} &amp; \text{för  }0.5 &lt; t^*_{max} &lt; 2.0 \\
+  \frac{T_{max}-T_0}{250\Gamma}+t_{max} &amp; \text{för  }t^*_{max} \geq 2.0 \\
+  \end{cases}
+\]</span></p>
+<p><span class="math inline">\(t_{cool}\)</span> beräknas här i timmar och <span class="math inline">\(T_{max}\)</span> beräknas som brandtemperaturen vid <span class="math inline">\(t_{max}\)</span>.</p>
+<p>Det finns situationer som avviker från ovanstående. Det är ovanligt förekommande men sker vid låg brandbelastning i kombination med tillräckligt stora ventilationsöppningar. I dessa fall antas övertändningen inte kunna ske och branden begränsas av andra faktorer. Mer om detta i EN 1991-1-2.</p>
 </section>
 </section>
+<section id="lokal-brand" class="level4" data-number="2.1.2.2">
+<h4 data-number="2.1.2.2" class="anchored" data-anchor-id="lokal-brand"><span class="header-section-number">2.1.2.2</span> Lokal brand</h4>
+<p>Alla bränder är inledningsvis lokala. Dimensionering bör förutsätta att branden går till övertändning och endast begränsas av syre- respektive bränsletillgång. För fall där brandhärden är tydligt begränsad i rummet eller där övertändning inte kan förväntas ske är det dock möjligt att branden stannar som lokal. Normalt kan dock en brand gå till övertändning även i mycket stora lokaler.</p>
+<p>För BK2- och BK3-byggnader finns möjligheten att tillämpa lokal brand även i lokaler där brand kan gå till övertändning. Detta förutsätter att sannolikheten för övertändning är tillräckligt liten, exempelvis genom att tekniska system förhindrar branden att växa sig så stor att övertändning kan ske. För BK1-byggnader finns dock inte samma möjlighet. Brandpåkänning från lokal brand kan beräknas med metoder angivna i EN 1991-1-2 Annex C.</p>
+</section>
+</section>
+<section id="fire-severity" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="fire-severity"><span class="header-section-number">2.1.3</span> Fire severity</h3>
+<p>I den tidiga brandprovningen klassificerades byggnadsdelar utifrån hur länge de motstod en brand. Branden kvantifierades sedan till att likna den standardbrandkurva som tillämpas idag och ambitionen var att den skulle någorlunda representera en tänkt brandutveckling [Babrauskas]. Under 1920-talet gjordes försök där temperaturen i brandrum mättes över tid beroende på brandbelastning i rummet. Temperaturen översattes till en brandpåverkan som i sin tur översattes till den tid med standardbrand som samma brandpåverkan uppnåtts [Ingberg]. Efter andra världskriget noterades att detta förhållande endast var giltigt för obrännbara konstruktioner då en av förutsättningarna var att stommen i sig inte fick bidra till brandförloppet [PW building studies].</p>
+<p>Under den våg på 1990-talet då intresset ökade för funktionsbaserad dimensionering kopplades dessa två principer; standardbrand och naturligt brandförlopp, isär och kravuppfyllnad kunde från och med då uppnås med endera metoden. Frikopplingen av standardbrand som ensam kravställare utan koppling till naturligt brandförlopp öppnade upp för träbyggande i större omfattning än tidigare. Det skapade också nya utmaningar i det att den koppling som varit mellan fullständigt brandförlopp och tid på standardbrandkurvan, tappat delar av sin giltighet.</p>
+
+
 </section>
 </section>
 
@@ -872,8 +959,8 @@ Figure&nbsp;2.4: Gammafaktorns skalningsfuntion
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/02_steel.html" class="pagination-link" aria-label="Stål">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Stål</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../chapters/05_design.html" class="pagination-link" aria-label="Designstrategier">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Designstrategier</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -882,4 +969,4 @@ Figure&nbsp;2.4: Gammafaktorns skalningsfuntion
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/LTU-fire/sfd-book/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
